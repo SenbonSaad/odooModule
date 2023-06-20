@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="transport_marchandise.list">
+      <field name="name">transport_marchandise list</field>
+      <field name="model">transport_marchandise.transport_marchandise</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="transport_marchandise.action_window">
+      <field name="name">transport_marchandise window</field>
+      <field name="res_model">transport_marchandise.transport_marchandise</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="transport_marchandise.action_server">
+      <field name="name">transport_marchandise server</field>
+      <field name="model_id" ref="model_transport_marchandise_transport_marchandise"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="transport_marchandise" id="transport_marchandise.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="transport_marchandise.menu_1" parent="transport_marchandise.menu_root"/>
+    <menuitem name="Menu 2" id="transport_marchandise.menu_2" parent="transport_marchandise.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="transport_marchandise.menu_1_list" parent="transport_marchandise.menu_1"
+              action="transport_marchandise.action_window"/>
+    <menuitem name="Server to list" id="transport_marchandise" parent="transport_marchandise.menu_2"
+              action="transport_marchandise.action_server"/>
+-->
+  </data>
+</odoo>

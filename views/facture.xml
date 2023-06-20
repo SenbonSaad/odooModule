@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <!-- View definition -->
+    <record id="view_facture_form" model="ir.ui.view">
+      <field name="name">facture.form</field>
+      <field name="model">gestion.facture</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="commande_id"/>
+              <field name="facture_id"/>
+              <field name="numero_facture"/>
+              <field name="date_facture"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_facture_tree" model="ir.ui.view">
+      <field name="name">facture.tree</field>
+      <field name="model">gestion.facture</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="commande_id"/>
+          <field name="facture_id"/>
+          <field name="numero_facture"/>
+          <field name="date_facture"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Action definition -->
+    <record id="action_facture" model="ir.actions.act_window">
+      <field name="name">Facture</field>
+      <field name="res_model">gestion.facture</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="view_facture_tree"/>
+      <field name="target">current</field>
+    </record>
+
+    <!-- Menu item -->
+    <menuitem id="menu_facture_form" name="Facture Form" parent="menu_commande" action="action_facture"/>
+  </data>
+</odoo>

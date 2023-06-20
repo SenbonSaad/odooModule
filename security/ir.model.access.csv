@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gestion_commande,access.gestion.commande,model_gestion_commande,base.group_user,1,1,1,1
+access_gestion_vehicule,access.gestion.vehicule,model_gestion_vehicule,base.group_user,1,1,1,1
+access_gestion_facture,access.gestion.facture,model_gestion_facture,base.group_user,1,1,1,1
+access_gestion_paiement,access.gestion.paiement,model_gestion_paiement,base.group_user,1,1,1,1

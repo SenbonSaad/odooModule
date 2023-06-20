@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+    <record id="view_commande_tree" model="ir.ui.view">
+      <field name="name">commande.tree</field>
+      <field name="model">gestion.commande</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="client_name" />
+          <field name="pickup_address" />
+          <field name="delivery_address" />
+          <field name="delivery_date" />
+          <field name="amount" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_commande_form" model="ir.ui.view">
+      <field name="name">commande.form</field>
+      <field name="model">gestion.commande</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="commande_id" />
+              <field name="client_name" />
+              <field name="pickup_address" />
+              <field name="delivery_address" />
+              <field name="delivery_date" />
+              <field name="amount" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_commande" model="ir.actions.act_window">
+      <field name="name">Commande</field>
+      <field name="res_model">gestion.commande</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_commande" name="gestion de transport" sequence="10" />
+    <menuitem id="menu_commande_list" name="Commande List" parent="menu_commande" action="action_commande" />
+  </data>
+</odoo>
